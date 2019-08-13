@@ -1,0 +1,27 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "webapp"
+      }
+    ],
+    "headers": [
+      {
+        "source": "static-with-header.html",
+        "headers": [
+          {
+            "key": "Content-Encoding",
+            "value": "gzip"
+          }
+        ]
+      }
+    ]
+  }
+}
